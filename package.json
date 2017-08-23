@@ -1,0 +1,27 @@
+{
+  "name": "simpleservice",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node_modules/.bin/lab",
+    "docker:build": "docker build -t magneticio/$npm_package_name:$npm_package_version .",
+    "docker:run": "docker run -d -P --name $npm_package_name magneticio/$npm_package_name:$npm_package_version",
+    "docker:stop": "docker stop $npm_package_name",
+    "docker:push": "docker push magneticio/$npm_package_name:$npm_package_version"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.26.1",
+    "good": "^7.2.0",
+    "good-console": "^6.4.0",
+    "hapi": "^16.5.2",
+    "pug": "^2.0.0-rc.3",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "lab": "^14.2.0"
+  }
+}

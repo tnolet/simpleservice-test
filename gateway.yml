@@ -1,0 +1,6 @@
+name: simpleservice/simpleservice/web
+routes:
+  simpleservice/simpleservice/simpleservice:1.1.0/web:
+    weight: 50%
+  simpleservice/simpleservice/simpleservice:1.0.0/web:
+    weight: 50%

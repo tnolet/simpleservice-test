@@ -1,0 +1,13 @@
+name: simpleservice:1.1.0
+clusters:
+  simpleservice:
+    services:
+      breed:
+        name: simpleservice:1.1.0
+        deployable: magneticio/simpleservice:1.1.0
+        ports:
+          web: 3000/http
+      scale:
+        cpu: 0.2
+        memory: 128MB
+        instances: 1
